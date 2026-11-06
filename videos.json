@@ -1,6 +1,98 @@
 {
-  "tags": ["Dicesar", "Overlap", "Attacking", "Defending", "Set Pieces", "Goalkeeping", "Transitions", "Fitness"],
+  "tags": [
+    "Dicesar",
+    "Overlap",
+    "Set Pieces",
+    "Fly Keeper",
+    "Transitions",
+    "3-1 Rotation",
+    "Goalkeeping",
+    "Attacking",
+    "Defending",
+    "Fitness"
+  ],
   "videos": [
+    {
+      "id": "010",
+      "url": "https://www.instagram.com/reel/DcCKw5uinq5/",
+      "title": "Sideline Set Piece: Offensive Attack",
+      "tags": ["Set Pieces", "Attacking"],
+      "note": "Offensive attack from the sidelines. Look at the blocking movement and the timing of the runner coming from deep.",
+      "added": "2026-11-06",
+      "featured": false
+    },
+    {
+      "id": "011",
+      "url": "https://youtu.be/0GUpfO444U8",
+      "title": "Transition & Counter-Attack Play",
+      "tags": ["Transitions", "Attacking"],
+      "note": "Quick offensive transition: rapid ball circulation and decision making as numbers shift forward.",
+      "added": "2026-11-06",
+      "featured": false
+    },
+    {
+      "id": "012",
+      "url": "https://youtu.be/EzMZzki-xs8",
+      "title": "Fly Keeper (Goleiro Linha): Tactical Movements",
+      "tags": ["Fly Keeper", "Attacking", "Set Pieces"],
+      "note": "Lads, this is the move we started doing today: fly keepers. Pay attention to the cones. They represent two types of defense. For each defense, we have a different move. / Galera, estuda aí goleiro linha que fizemos hoje. Observem os cones, eles representam dois tipos de defesa. Para cada tipo de defesa nós temos diferentes movimentos.",
+      "added": "2026-11-06",
+      "featured": true
+    },
+    {
+      "id": "013",
+      "url": "https://youtu.be/ja8Wa7C1yPk",
+      "title": "Defensive Transition & Recomposição",
+      "tags": ["Transitions", "Defending"],
+      "note": "Recomposição defensiva rápida: recuperação de espaço, pressão na bola e recomposição da linha de defesa.",
+      "added": "2026-11-06",
+      "featured": false
+    },
+    {
+      "id": "014",
+      "url": "https://www.instagram.com/reel/DdRok_8Bo9v/",
+      "title": "3x1 Rotation System",
+      "tags": ["3-1 Rotation", "Attacking"],
+      "note": "Rotations in a 3-1 system: movement of the wingers and support angles for the pivot.",
+      "added": "2026-11-06",
+      "featured": false
+    },
+    {
+      "id": "015",
+      "url": "https://youtube.com/shorts/bUtri9MJsMw",
+      "title": "Set Piece Variation 1",
+      "tags": ["Set Pieces", "Attacking"],
+      "note": "Set piece execution: decoy run and quick delivery to the open shooting lane.",
+      "added": "2026-11-06",
+      "featured": false
+    },
+    {
+      "id": "016",
+      "url": "https://youtube.com/shorts/U1DeATHCFV0",
+      "title": "Set Piece Variation 2",
+      "tags": ["Set Pieces", "Attacking"],
+      "note": "Sideline/kick-in set piece: timing of the fake and creating space for the second-post finish.",
+      "added": "2026-11-06",
+      "featured": false
+    },
+    {
+      "id": "017",
+      "url": "https://youtu.be/NJnPad0I_Kc",
+      "title": "Goalkeeper Training & Positioning",
+      "tags": ["Goalkeeping", "Defending"],
+      "note": "Goalkeeper footwork, reaction saves, and positioning against quick close-range shots.",
+      "added": "2026-11-06",
+      "featured": false
+    },
+    {
+      "id": "005",
+      "url": "https://youtube.com/shorts/jN1-7kfYuKg",
+      "title": "Dicesar + Overlap combination",
+      "tags": ["Dicesar", "Overlap", "Attacking"],
+      "note": "How the two movements chain together, and the decision the ball carrier makes.",
+      "added": "2026-11-06",
+      "featured": true
+    },
     {
       "id": "001",
       "url": "https://youtube.com/shorts/6N4E1_GO3oQ",
@@ -36,15 +128,6 @@
       "note": "How the other players rotate to fill the space the runner leaves.",
       "added": "2026-11-06",
       "featured": false
-    },
-    {
-      "id": "005",
-      "url": "https://youtube.com/shorts/jN1-7kfYuKg",
-      "title": "Dicesar + Overlap combination",
-      "tags": ["Dicesar", "Overlap", "Attacking"],
-      "note": "How the two movements chain together, and the decision the ball carrier makes.",
-      "added": "2026-11-06",
-      "featured": true
     },
     {
       "id": "006",
