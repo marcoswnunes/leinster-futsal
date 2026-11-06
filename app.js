@@ -67,7 +67,7 @@ if (typeof document !== "undefined") {
   const state = {
     videos: [],
     tags: [],
-    activeTags: new Set(),
+    activeTag: null,
     query: "",
     hideWatched: false,
     watched: loadWatched(),
@@ -177,7 +177,7 @@ if (typeof document !== "undefined") {
   /* --- Filtering & rendering --- */
   function matches(v) {
     if (state.hideWatched && state.watched.has(v.id)) return false;
-    if (state.activeTags.size && !(v.tags || []).some((t) => state.activeTags.has(t))) return false;
+    if (state.activeTag && !(v.tags || []).includes(state.activeTag)) return false;
     if (state.query) {
       const hay = [v.title, v.note, ...(v.tags || [])].join(" ").toLowerCase();
       if (!state.query.split(/\s+/).every((w) => hay.includes(w))) return false;
@@ -186,7 +186,7 @@ if (typeof document !== "undefined") {
   }
 
   function render() {
-    const filtering = state.activeTags.size || state.query || state.hideWatched;
+    const filtering = Boolean(state.activeTag || state.query || state.hideWatched);
     const visible = state.videos.filter(matches);
     const featured = filtering ? [] : visible.filter((v) => v.featured);
 
@@ -209,9 +209,9 @@ if (typeof document !== "undefined") {
   }
 
   function renderChips() {
-    const all = `<button class="chip" type="button" data-chip="" aria-pressed="${state.activeTags.size === 0}">All</button>`;
+    const all = `<button class="chip" type="button" data-chip="" aria-pressed="${!state.activeTag}">All</button>`;
     els.chips.innerHTML = all + state.tags.map((t) =>
-      `<button class="chip" type="button" data-chip="${esc(t)}" aria-pressed="${state.activeTags.has(t)}">${esc(t)}</button>`
+      `<button class="chip" type="button" data-chip="${esc(t)}" aria-pressed="${state.activeTag === t}">${esc(t)}</button>`
     ).join("");
   }
 
@@ -238,7 +238,7 @@ if (typeof document !== "undefined") {
     if (!state.videos.some((v) => v.id === id)) return;
     // Make sure the target is visible: clear filters if needed.
     if (!document.getElementById(`v-${id}`)) {
-      state.activeTags.clear(); state.query = ""; state.hideWatched = false;
+      state.activeTag = null; state.query = ""; state.hideWatched = false;
       els.search.value = ""; els.hideWatched.checked = false;
       render();
     }
@@ -262,9 +262,10 @@ if (typeof document !== "undefined") {
     const chip = e.target.closest("[data-chip]");
     if (!chip) return;
     const tag = chip.dataset.chip;
-    if (!tag) state.activeTags.clear();
-    else state.activeTags.has(tag) ? state.activeTags.delete(tag) : state.activeTags.add(tag);
+    // Single-selection: clicking active tag clears it, clicking another switches directly to it
+    state.activeTag = (!tag || state.activeTag === tag) ? null : tag;
     render();
+    chip.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
   });
   document.addEventListener("click", (e) => {
     const facade = e.target.closest("button.facade");
@@ -272,7 +273,7 @@ if (typeof document !== "undefined") {
 
     const tagBtn = e.target.closest(".tag[data-tag]");
     if (tagBtn) {
-      state.activeTags = new Set([tagBtn.dataset.tag]);
+      state.activeTag = tagBtn.dataset.tag;
       render();
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;

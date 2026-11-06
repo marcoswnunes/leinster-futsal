@@ -74,32 +74,46 @@ h1 .accent {
 /* ===== Controls ===== */
 .controls {
   position: sticky; top: 0; z-index: 10;
-  background: var(--bg); padding: 14px 0 10px;
+  background: rgba(11, 11, 12, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 10px 0 8px;
   border-bottom: 1px solid var(--surface-2);
 }
 .search {
-  width: 100%; padding: 12px 14px; font: inherit; font-size: 1rem;
+  width: 100%; padding: 10px 14px; font: inherit; font-size: .95rem;
   color: var(--text); background: var(--surface);
   border: 1px solid var(--surface-2); border-radius: 10px; outline: none;
 }
 .search:focus { border-color: var(--brand-accent); }
 .chips {
-  display: flex; gap: 8px; margin-top: 10px; overflow-x: auto;
-  padding-bottom: 4px; scrollbar-width: none;
+  display: flex; gap: 6px; margin-top: 8px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+  padding: 2px 2px 6px 2px;
+  scrollbar-width: none;
 }
 .chips::-webkit-scrollbar { display: none; }
 .chip {
-  flex-shrink: 0; padding: 7px 14px; border-radius: 999px;
+  flex-shrink: 0; padding: 6px 13px; border-radius: 999px;
   border: 1px solid var(--surface-2); background: var(--surface);
-  color: var(--text); font: inherit; font-size: .875rem; font-weight: 600;
+  color: var(--text-muted); font: inherit; font-size: .82rem; font-weight: 600;
   cursor: pointer; white-space: nowrap;
+  scroll-snap-align: start;
+  transition: all .15s ease;
 }
+.chip:active { transform: scale(0.96); }
 .chip[aria-pressed="true"] {
-  background: var(--brand-accent); border-color: var(--brand-accent); color: var(--on-accent);
+  background: var(--brand-accent);
+  border-color: var(--brand-accent);
+  color: var(--on-accent);
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(227, 20, 27, 0.35);
 }
 .controls-row {
   display: flex; justify-content: space-between; align-items: center;
-  margin-top: 8px; font-size: .875rem; color: var(--text-muted);
+  margin-top: 6px; font-size: .8rem; color: var(--text-muted);
 }
 .toggle { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
 .toggle input { accent-color: var(--brand-accent); width: 16px; height: 16px; }
