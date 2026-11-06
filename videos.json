@@ -1,0 +1,86 @@
+{
+  "tags": ["Dicesar", "Overlap", "Attacking", "Defending", "Set Pieces", "Goalkeeping", "Transitions", "Fitness"],
+  "videos": [
+    {
+      "id": "001",
+      "url": "https://youtube.com/shorts/6N4E1_GO3oQ",
+      "title": "Dicesar movement: example 1",
+      "tags": ["Dicesar", "Attacking"],
+      "note": "The timing of the Dicesar run and the space it opens for the next pass.",
+      "added": "2026-11-06",
+      "featured": false
+    },
+    {
+      "id": "002",
+      "url": "https://youtube.com/shorts/hELZOoK7B0g",
+      "title": "Dicesar movement: example 2",
+      "tags": ["Dicesar", "Attacking"],
+      "note": "Where the runner starts, and how the defender is dragged out of position.",
+      "added": "2026-11-06",
+      "featured": false
+    },
+    {
+      "id": "003",
+      "url": "https://youtube.com/shorts/YDpkAfALZwQ",
+      "title": "Dicesar movement: example 3",
+      "tags": ["Dicesar", "Attacking"],
+      "note": "The passer's body shape and when the ball is released into the run.",
+      "added": "2026-11-06",
+      "featured": false
+    },
+    {
+      "id": "004",
+      "url": "https://youtube.com/shorts/7g_XwdHLt2g",
+      "title": "Dicesar movement: example 4",
+      "tags": ["Dicesar", "Attacking"],
+      "note": "How the other players rotate to fill the space the runner leaves.",
+      "added": "2026-11-06",
+      "featured": false
+    },
+    {
+      "id": "005",
+      "url": "https://youtube.com/shorts/jN1-7kfYuKg",
+      "title": "Dicesar + Overlap combination",
+      "tags": ["Dicesar", "Overlap", "Attacking"],
+      "note": "How the two movements chain together, and the decision the ball carrier makes.",
+      "added": "2026-11-06",
+      "featured": true
+    },
+    {
+      "id": "006",
+      "url": "https://youtube.com/shorts/tkqAJ1WJdBA",
+      "title": "Overlap movement: example 1",
+      "tags": ["Overlap", "Attacking"],
+      "note": "The overlapping player's timing: going too early or too late kills the option.",
+      "added": "2026-11-06",
+      "featured": false
+    },
+    {
+      "id": "007",
+      "url": "https://youtube.com/shorts/IUT7IXvpbk4",
+      "title": "Overlap movement: example 2",
+      "tags": ["Overlap", "Attacking"],
+      "note": "How the ball carrier holds the defender before releasing the overlap.",
+      "added": "2026-11-06",
+      "featured": false
+    },
+    {
+      "id": "008",
+      "url": "https://youtu.be/PKcw7RzWaGU",
+      "title": "Overlap movement: example 3",
+      "tags": ["Overlap", "Attacking"],
+      "note": "The angle and speed of the overlapping run.",
+      "added": "2026-11-06",
+      "featured": false
+    },
+    {
+      "id": "009",
+      "url": "https://youtu.be/HaRqfNqBBGU",
+      "title": "Overlap movement: example 4",
+      "tags": ["Overlap", "Attacking"],
+      "note": "What the team does after the overlap: the second action and the rest-defence cover.",
+      "added": "2026-11-06",
+      "featured": false
+    }
+  ]
+}

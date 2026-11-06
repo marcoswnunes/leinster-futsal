@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Leinster Futsal — Training Hub</title>
+  <meta name="description" content="Leinster Futsal team video library: reference clips and training material." />
+  <!-- Unlisted: keep out of search engines -->
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- WhatsApp / Open Graph link preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Leinster Futsal — Training Hub" />
+  <meta property="og:description" content="Team video library: clips to watch before training." />
+  <meta property="og:image" content="/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="/assets/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/assets/logo.png" />
+  <meta name="theme-color" content="#0b0b0c" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800;1,900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <img class="logo" src="/assets/logo.png" alt="Leinster Futsal crest" />
+      <div>
+        <p class="eyebrow">Leinster Futsal</p>
+        <h1>Training <span class="accent">Hub</span></h1>
+      </div>
+    </div>
+  </header>
+  <div class="kit-stripes" aria-hidden="true"></div>
+
+  <main class="wrap">
+    <section class="controls" aria-label="Filter videos">
+      <input id="search" class="search" type="search" placeholder="Search videos…" autocomplete="off" />
+      <div id="tag-chips" class="chips" role="group" aria-label="Filter by category"></div>
+      <div class="controls-row">
+        <label class="toggle">
+          <input id="hide-watched" type="checkbox" />
+          <span>Hide watched</span>
+        </label>
+        <span id="count" class="count" aria-live="polite"></span>
+      </div>
+    </section>
+
+    <section id="featured-section" class="featured" hidden>
+      <h2 class="section-title">★ Must-watch</h2>
+      <div id="featured-grid" class="grid"></div>
+    </section>
+
+    <section>
+      <h2 id="all-title" class="section-title">All videos</h2>
+      <div id="grid" class="grid"></div>
+      <p id="empty" class="empty" hidden></p>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <p>Leinster Futsal · Team use only · <a href="https://www.instagram.com/leinsterfutsal" target="_blank" rel="noopener">@leinsterfutsal</a></p>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
+

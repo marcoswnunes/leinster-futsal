@@ -1,0 +1,29 @@
+[build]
+  publish = "."
+
+# Unlisted: keep every page out of search engines
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+
+# Don't serve the branding reference files or repo docs
+[[redirects]]
+  from = "/branding/*"
+  to = "/404"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/README.md"
+  to = "/404"
+  status = 404
+  force = true
+
+# Always fetch the latest video list
+[[headers]]
+  for = "/videos.json"
+  [headers.values]
+    Cache-Control = "no-cache"
