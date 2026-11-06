@@ -76,8 +76,7 @@ if (typeof document !== "undefined") {
   const $ = (id) => document.getElementById(id);
   const els = {
     search: $("search"), chips: $("tag-chips"), hideWatched: $("hide-watched"),
-    count: $("count"), grid: $("grid"), featuredSection: $("featured-section"),
-    featuredGrid: $("featured-grid"), empty: $("empty"), allTitle: $("all-title"),
+    count: $("count"), grid: $("grid"), empty: $("empty"), allTitle: $("all-title"),
   };
 
   function loadWatched() {
@@ -188,15 +187,9 @@ if (typeof document !== "undefined") {
   function render() {
     const filtering = Boolean(state.activeTag || state.query || state.hideWatched);
     const visible = state.videos.filter(matches);
-    const featured = filtering ? [] : visible.filter((v) => v.featured);
 
-    els.featuredSection.hidden = featured.length === 0;
-    els.featuredGrid.innerHTML = featured.map(cardHtml).join("");
-    // Featured videos are only shown once: in Must-watch when unfiltered.
-    const rest = filtering ? visible : visible.filter((v) => !v.featured);
-    els.grid.innerHTML = rest.map(cardHtml).join("");
+    els.grid.innerHTML = visible.map(cardHtml).join("");
     els.allTitle.textContent = filtering ? "Results" : "All videos";
-    els.allTitle.hidden = !filtering && rest.length === 0 && featured.length > 0;
 
     els.count.textContent = `${visible.length} of ${state.videos.length} video${state.videos.length === 1 ? "" : "s"}`;
     els.empty.hidden = visible.length > 0;
